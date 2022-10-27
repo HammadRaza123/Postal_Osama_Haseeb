@@ -6,14 +6,44 @@ const styles = StyleSheet.create({
   mainViewContainer: {
     flex: 1,
     backgroundColor: AppColors.white,
-    justifyContent: 'center',
-    alignItems: 'center'
+    marginHorizontal:16,
+    // justifyContent: 'center',
+    // alignItems: 'center'
   },
-  title: {
-    color: AppColors.black,
-    fontWeight: 'bold',
-    fontSize: width(4),
-    marginBottom: height(2)
+  componnetcontainer:{
+    height:height(28),
+     justifyContent:'space-between',
+    marginTop:height(6)
+  },
+  forgetcontainer:{
+    marginTop:height(3),
+    flexDirection:"row-reverse"
+  },
+  forgettext:{
+     fontSize:15
+  },
+  btncontainer:{
+    flexDirection:'row',
+    width:width(52),
+    // backgroundColor:AppColors.red,
+    justifyContent:'space-between'
+  },
+  btn1container:{
+    borderRadius:90,
+    width:width(25),
+    backgroundColor:AppColors.black
+  },
+  btn2container:{
+    borderRadius:90,
+    width:width(25),
+    backgroundColor:AppColors.gray
+  },
+  btn1color:{
+    color:AppColors.white
+  },
+  btn2color:{
+    color:AppColors.black
   }
+
 });
 export default styles;
