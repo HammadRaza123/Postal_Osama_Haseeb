@@ -32,8 +32,8 @@ export default function Splash({ navigation, route }) {
       <View style={styles.mainViewContainer}>
         <View style={styles.imageconatiner}>
           <Image
-            style={styles.postalogo}
-            source={require("../../../assects/PostalLogo.png")}
+          style={styles.postalogo}
+          source ={require('../../../assets/images/postalLogo.png')}
           />
         </View>
       </View>

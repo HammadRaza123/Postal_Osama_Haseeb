@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
+import AppColors from '~utills/AppColors';
 import { height, width } from '~utills/Dimension';
-import AppColors from '../../../utills/AppColors';
 
 const styles = StyleSheet.create({
   mainViewContainer: {
@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     // alignItems: 'center'
   },
   componnetcontainer:{
-    height:height(28),
+    height:height(22.5),
      justifyContent:'space-between',
     marginTop:height(6)
   },
@@ -43,7 +43,37 @@ const styles = StyleSheet.create({
   },
   btn2color:{
     color:AppColors.black
+  },
+  btncontainertwo:{
+    // backgroundColor:AppColors.red,
+    height:height(22),
+    justifyContent:"space-between",
+    width:width(90),
+    marginTop:38
+  },
+  btn3:{
+    borderRadius:0,
+    backgroundColor:AppColors.orange
+  },
+  btn3text:{
+    color:AppColors.white
+  },
+  btn4:{
+    borderRadius:0,
+    backgroundColor:AppColors.gray
+  },
+  btn4text:{
+    color:AppColors.black
+  },
+  signupcontainer:{ 
+    height:height(12.7),
+    justifyContent:'space-between',
+    alignItems:'center',
+    marginTop:45
+  },
+  accounttextcolor:{
+    color:AppColors.black,
+    fontWeight:"bold"
   }
-
 });
 export default styles;

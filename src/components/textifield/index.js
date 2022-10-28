@@ -15,38 +15,20 @@ export default function Textfeild({
 }) {
   const appLoader = useSelector(selectAppLoader);
   return (
-    <View
-      style={{
-        flexDirection: "row",
-        alignItems: "center",
-        backgroundColor: "red",
-        justifyContent:'space-between'
-      }}
-    >
+    <View style={styles.textfeildconatiner}>
       <View>
         <MessageSvg />
       </View>
-      <View
-        style={{
-          backgroundColor: "blue",
-          flexDirection: "row",
-          alignItems: "center",
-          borderBottomWidth: width(0.5),
-          borderColor: "black",
-        }}
-      >
+      <View>
         <View>
-          <Text style={styles.text1}>{text}</Text>
+          <Text>{text}</Text>
+        </View>
+        <View style={styles.textinput1}>
           <TextInput
-            style={styles.textinput}
             onChangeText={onChangeText}
             value={value}
-            placeholder={placeholder}
-            secureTextEntry={secureTextEntry}
+            secureTextEntry={true}
           />
-        </View>
-        <View>
-          <MessageSvg />
         </View>
       </View>
     </View>

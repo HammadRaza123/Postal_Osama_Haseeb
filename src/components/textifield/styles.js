@@ -8,13 +8,15 @@ const styles = StyleSheet.create({
         color:AppColors.black,
         fontWeight:'bold'
     },
-    textinput:{
-        width:width(80),
+    textfeildconatiner:{
+        // backgroundColor:AppColors.red,
+        flexDirection:'row',
+        alignItems:'center'
     },
-    text1:{
-        color:AppColors.black,
-        fontSize:15,
-        fontWeight:'900'
+    textinput1:{
+        borderBottomWidth:2,
+        width:width(80),
+        height:height(6)
     }
 });
 export default styles;
