@@ -5,5 +5,6 @@ const ScreenNames ={
     ONBOARDING:'Onboarding',
     RESETPASSWORD:'Resetpassword',
     SIGNUP:'Signup',
+    ACCOUNTVARIFICATION:'Accountvarification',
    }
   export default ScreenNames;

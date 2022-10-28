@@ -6,15 +6,18 @@ const styles = StyleSheet.create({
   mainViewContainer: {
     flex: 1,
     backgroundColor: AppColors.white,
-    // justifyContent: 'center',
+    justifyContent: 'center',
     alignItems: 'center'
   },
   nametextcontainer:{
      flexDirection:'row',
-    marginTop:height(5.5)
+     marginTop:height(5.5),
+    width:width(90),
+    alignSelf:'center',
+    justifyContent:'space-between'
   },
   namestyle:{
-    width:width(40)
+    width:width(38)
   },
   textfeildstyle:{
     marginTop:height(3),
@@ -63,6 +66,10 @@ const styles = StyleSheet.create({
   btn4text:{
     color:AppColors.black
   },
-
+  checkstyle:{
+    width:width(81.5),
+    marginTop:height(2),
+    marginBottom:height(2),
+   }
 });
 export default styles;

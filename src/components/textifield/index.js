@@ -12,14 +12,17 @@ export default function Textfeild({
   placeholder,
   text,
   secureTextEntry,
-  textfeildStyles
+  textfeildStyles,
+  keyboardType,
+  firstIcon
 }) {
   const appLoader = useSelector(selectAppLoader);
   return (
     <View style={styles.textfeildconatiner}>
+      {firstIcon&&
       <View>
-        <MessageSvg />
-      </View>
+       {firstIcon}
+      </View>}
       <View>
         <View>
           <Text>{text}</Text>
@@ -29,7 +32,9 @@ export default function Textfeild({
             onChangeText={onChangeText}
             value={value}
             secureTextEntry={secureTextEntry}
-          />
+            keyboardType={keyboardType}
+            placeholder={placeholder}
+           />
         </View>
       </View>
     </View>
