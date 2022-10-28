@@ -65,6 +65,7 @@ export default function Login({ navigation, route }) {
         <View style={styles.signupcontainer}>
           <Text style={styles.accounttextcolor}>Don't have an account</Text>
           <Button
+          onPress={() => navigation.navigate(ScreenNames.SIGNUP)}
             containerStyle={styles.btn4}
             textStyle={styles.btn4text}
             title="Sign Up"

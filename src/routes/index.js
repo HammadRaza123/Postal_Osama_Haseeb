@@ -2,7 +2,7 @@ import * as React from 'react';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useSelector } from 'react-redux';
-import { LoginScreen, Onboarding,Resetpassword,Splash } from '~screens/auth';
+import { LoginScreen, Onboarding,Resetpassword,Signup,Splash } from '~screens/auth';
 import { Loader } from '~components';
 import { selectIsLogin } from '~redux/slices/authSlice';
 import ScreenNames from './routes';
@@ -26,8 +26,8 @@ export default function Routes() {
           <Stack.Screen name={ScreenNames.SPLASH} component={Splash} />
           <Stack.Screen name={ScreenNames.ONBOARDING} component={Onboarding} />
           <Stack.Screen name={ScreenNames.RESETPASSWORD} component={Resetpassword} />
-          {/* <Stack.Screen name={ScreenNames.SIGNUP} component={Signup} /> */}
-        </Stack.Navigator>
+          <Stack.Screen name={ScreenNames.SIGNUP} component={Signup} />
+         </Stack.Navigator>
       ) : (
         <Stack.Navigator initialRouteName={ScreenNames.HOME} screenOptions={{ header: () => false }}>
           <Stack.Screen name={ScreenNames.HOME} component={HomeScreen} />

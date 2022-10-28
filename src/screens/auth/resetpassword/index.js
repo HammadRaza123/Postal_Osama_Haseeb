@@ -6,13 +6,13 @@ import { login } from "~redux/slices/authSlice";
 import { Button, Header, ScreenWrapper, TextField  } from "~components";
  import ScreenNames from "~routes/routes";
 import { MessageSvg } from "~assets/svg";
-export default function Resetpassword({ navigation, route,goBack }) {
+export default function Resetpassword({ navigation:{goBack},route}) {
   const dispatch = useDispatch();
   return (
     <ScreenWrapper>
       <View style={styles.mainViewContainer}>
         <Header
-          // onPress={() => navigation.goBack}
+          onPress={() => goBack()}
           text={"Reset Your Password"}
         />
         <View style={styles.text1style}>

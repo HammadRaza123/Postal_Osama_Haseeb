@@ -12,6 +12,7 @@ export default function Textfeild({
   placeholder,
   text,
   secureTextEntry,
+  textfeildStyles
 }) {
   const appLoader = useSelector(selectAppLoader);
   return (
@@ -23,11 +24,11 @@ export default function Textfeild({
         <View>
           <Text>{text}</Text>
         </View>
-        <View style={styles.textinput1}>
+        <View style={[styles.textinput1,textfeildStyles]}>
           <TextInput
             onChangeText={onChangeText}
             value={value}
-            secureTextEntry={true}
+            secureTextEntry={secureTextEntry}
           />
         </View>
       </View>

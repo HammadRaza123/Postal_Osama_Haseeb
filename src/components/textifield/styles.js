@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     },
     textinput1:{
         borderBottomWidth:2,
-        width:width(80),
+        width:width(84),
         height:height(6)
     }
 });

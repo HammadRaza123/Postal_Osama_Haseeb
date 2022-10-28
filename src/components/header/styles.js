@@ -8,7 +8,8 @@ const styles = StyleSheet.create({
         fontWeight:'bold'
     },
     headerconatiner:{
-        height:height(8), 
+        width:width(90),
+         height:height(8), 
         justifyContent:'space-between'
     }
   
