@@ -6,5 +6,6 @@ const ScreenNames ={
     RESETPASSWORD:'Resetpassword',
     SIGNUP:'Signup',
     ACCOUNTVARIFICATION:'Accountvarification',
-   }
+    DRAWERSCREEN:'DrawerScreen',
+     }
   export default ScreenNames;

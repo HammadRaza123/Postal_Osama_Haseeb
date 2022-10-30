@@ -43,6 +43,7 @@ export default function Login({ navigation, route }) {
             containerStyle={styles.btn2container}
             textStyle={styles.btn2color}
             title="Driver"
+            onPress={() => navigation.navigate(ScreenNames.DRAWERSCREEN)}
           />
         </View>
         <View style={styles.btncontainertwo}>

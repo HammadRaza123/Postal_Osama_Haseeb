@@ -4,4 +4,4 @@ export {default as Onboarding} from './onbordingScreen'
 export {default as Resetpassword} from './resetpassword'
 export {default as Signup} from './signup'
 export {default as Accountvarification} from './accountvarification'
- 
+export {default as DrawerScreen} from './drawerScreen'

@@ -2,14 +2,17 @@ import * as React from 'react';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useSelector } from 'react-redux';
-import { Accountvarification, LoginScreen, Onboarding,Resetpassword,Signup,Splash } from '~screens/auth';
+import { Accountvarification,DrawerScreen,LoginScreen, Onboarding,Resetpassword,Signup,Splash } from '~screens/auth';
 import { Loader } from '~components';
 import { selectIsLogin } from '~redux/slices/authSlice';
 import ScreenNames from './routes';
 import { HomeScreen } from '~screens/app';
 import SplashScreen from 'react-native-splash-screen';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
+
 
 export default function Routes() {
   const isLogin = useSelector(selectIsLogin)
@@ -28,7 +31,8 @@ export default function Routes() {
           <Stack.Screen name={ScreenNames.RESETPASSWORD} component={Resetpassword} />
           <Stack.Screen name={ScreenNames.SIGNUP} component={Signup} />
           <Stack.Screen name={ScreenNames.ACCOUNTVARIFICATION} component={Accountvarification} />
-         </Stack.Navigator>
+          <Stack.Screen name={ScreenNames.DRAWERSCREEN} component={DrawerScreen} />
+           </Stack.Navigator>
       ) : (
         <Stack.Navigator initialRouteName={ScreenNames.HOME} screenOptions={{ header: () => false }}>
           <Stack.Screen name={ScreenNames.HOME} component={HomeScreen} />

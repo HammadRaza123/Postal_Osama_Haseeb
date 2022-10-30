@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, Image, ScrollView, FlatList } from "react-native";
+import { Text, View, Image, ScrollView, FlatList, Alert } from "react-native";
 import styles from "./styles";
 import { useDispatch } from "react-redux";
 import { Button, CircleCheck, Header, ScreenWrapper, TextField } from "~components";
@@ -9,6 +9,12 @@ import AppColors from "~utills/AppColors";
 import { width } from "~utills/Dimension";
  export default function Signup({ navigation, route }) {
   const dispatch = useDispatch();
+
+  const driverfields = () =>{
+    return(
+      Alert.alert('nfgjd')
+    )
+  }
 
  let Vechiclearray =[
   {
@@ -76,7 +82,7 @@ const renderVechicles =({item}) =>{
               text={"Confirm password"}
             />
           </View>
-          <View style={styles.textfeildstyle}>
+          {/* <View style={styles.textfeildstyle}>
             <TextField
               placeholder={"Select Licence Image"}
               firstIcon={<PhoneSvg />}
@@ -147,12 +153,16 @@ const renderVechicles =({item}) =>{
               firstIcon={<PhoneSvg />}
               text={"Vehicle Modle Type"}
             />
-          </View>
-         </View>
+          </View> */}
+         {/* </View> */}
 
           <View style={styles.btncontaine1}>
             <Button containerStyle={styles.btn1color} title={"User"} />
-            <Button containerStyle={styles.btn2color} title={"Driver"} />
+            {
+            <Button containerStyle={styles.btn2color} title={"Driver"}
+            onPress={(driverfields)}
+            />
+          }
           </View>
           <View style={styles.btncontainertwo}>
             <Button
