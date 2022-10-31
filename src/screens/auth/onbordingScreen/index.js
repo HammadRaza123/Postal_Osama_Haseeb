@@ -7,7 +7,7 @@ import AppColors from "~utills/AppColors";
 import Swiper from "react-native-swiper";
 import { height, width } from "~utills/Dimension";
 import ScreenNames from "~routes/routes";
-import { Swiper1, Swiper2, Swiper3 } from "~assets/images";
+import { Swiper1, Swiper202, Swiper3 } from "~assets/images";
 export default function Onboarding({ navigation, route }) {
   const dispatch = useDispatch();
   const [swiperIndex, setSwiperIndex] = useState(0);
@@ -18,7 +18,9 @@ export default function Onboarding({ navigation, route }) {
         <Image style={styles.swiperlogo} source={image} />
         <View style={styles.text1o1container}>
           <Text style={styles.text1}>{heading}</Text>
+          <View style={styles.text1o2container}>
           <Text style={styles.text2}>{subheading}</Text>
+          </View>
         </View>
       </View>
     );
@@ -36,8 +38,7 @@ export default function Onboarding({ navigation, route }) {
             position: "relative",
             marginBottom: height(10),
           }}
-          // containerStyle={{backgroundColor:'blue',justifyContent:'center',}}
-          style={styles.swiper}
+           style={styles.swiper}
           activeDotStyle={styles.activedotcontainer}
           activeDotColor={AppColors.orange}
           dotColor={AppColors.white}
@@ -51,7 +52,7 @@ export default function Onboarding({ navigation, route }) {
             }
           />
           <SwiperComponent
-            image={Swiper2}
+            image={Swiper202}
             heading={"Know what's nearby"}
             subheading={"An easy and safe way to post your items"  }
           />
@@ -77,7 +78,7 @@ export default function Onboarding({ navigation, route }) {
               styles.btn1text,
               { color: swiperIndex == 2 ? AppColors.white : AppColors.orange },
             ]}
-            title="Sign in"
+            title="Sign In"
           />
           {swiperIndex == 2 ? null : (
             <Button

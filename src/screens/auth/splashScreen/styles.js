@@ -10,8 +10,8 @@ const styles = StyleSheet.create({
     backgroundColor:AppColors.black,
   },
   postalogo:{
-    width:width(50),
-    height:width(50),
+    width:width(75),
+    height:width(75),
   },
   btnconatiner1:{
     backgroundColor:AppColors.black,
@@ -19,12 +19,6 @@ const styles = StyleSheet.create({
   btn1:{ 
     backgroundColor:AppColors.orange,
     borderRadius:0,
-  },
-  btncontainer:{
-    marginTop:'80%',
-  },
-  imageconatiner:{
-    marginTop:95
   },
   btn1text:{
     color:AppColors.white,

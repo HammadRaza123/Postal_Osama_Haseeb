@@ -3,8 +3,9 @@ import { Text, View, Image, TouchableOpacity } from "react-native";
 import styles from "./styles";
 import { useDispatch } from "react-redux";
 import { login } from "~redux/slices/authSlice";
-import { Button, ScreenWrapper,Header, TextField } from "~components";
+import { Button, ScreenWrapper, Header, TextField } from "~components";
 import ScreenNames from "~routes/routes";
+import { MessageSvg } from "~assets/svg";
 export default function Login({ navigation, route }) {
   const dispatch = useDispatch();
   return (
@@ -21,16 +22,27 @@ export default function Login({ navigation, route }) {
                 />
             </View> */}
         <Header
-        onPress={() => navigation.navigate(ScreenNames.SPLASH)}
-        text={"Sign In To Your Account"}
+          onPress={() => navigation.navigate(ScreenNames.SPLASH)}
+          text={"Sign In To Your Account"}
         />
         <View style={styles.componnetcontainer}>
-          <TextField text={"Email"} />
-          <TextField text={"Password"} secureTextEntry={false} />
+          <TextField text={"Email"} firstIcon={<MessageSvg />} />
+         <View style={{justifyContent:"space-between",flexDirection:'row',alignItems:'center'}}>
+         <TextField
+            text={"Password"}
+            firstIcon={<MessageSvg />}
+            secureTextEntry={false}
+          />
+          <View>
+            <MessageSvg/>
+          </View>
+         </View>
         </View>
         <View style={styles.forgetcontainer}>
-          <TouchableOpacity onPress={() => navigation.navigate(ScreenNames.RESETPASSWORD)}>
-          <Text style={styles.forgettext}>Forgot Password?</Text>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(ScreenNames.RESETPASSWORD)}
+          >
+            <Text style={styles.forgettext}>Forgot Password?</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.btncontainer}>
@@ -64,9 +76,9 @@ export default function Login({ navigation, route }) {
           />
         </View>
         <View style={styles.signupcontainer}>
-          <Text style={styles.accounttextcolor}>Don't have an account</Text>
+          <Text style={styles.accounttextcolor}>Don't have an account?</Text>
           <Button
-          onPress={() => navigation.navigate(ScreenNames.SIGNUP)}
+            onPress={() => navigation.navigate(ScreenNames.SIGNUP)}
             containerStyle={styles.btn4}
             textStyle={styles.btn4text}
             title="Sign Up"

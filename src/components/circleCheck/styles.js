@@ -5,7 +5,8 @@ const styles = StyleSheet.create({
     headerconatiner:{
         flexDirection:'row',
         alignItems:'center',
-        justifyContent:"space-between"
+        width:width(27),
+        marginTop:height(1),
     },
     circle:{
         width:width(5),

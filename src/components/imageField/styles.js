@@ -20,13 +20,20 @@ const styles = StyleSheet.create({
         alignItems:'center',
     },
     textinput1:{
-        width:width(78),
-        height:height(6)
+        width:width(84),
     },
     icons:{
         justifyContent:'center',
         width:width(6),
         alignItems:'center'
+    },
+    image:{
+        width:width(84),
+        height:height(18)
+    },
+    textView:{
+        height:height(6),
+        justifyContent:'center'
     }
 });
 export default styles;

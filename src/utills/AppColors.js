@@ -4,6 +4,6 @@ const AppColors = {
     red: 'red',
     transparent:'transparent',
     orange:'#F4B555',
-    gray:'#0F1A4833',
+    gray:'#EFEFEF',
   };
   export default AppColors;

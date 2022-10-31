@@ -1,5 +1,12 @@
 import React from "react";
-import { ActivityIndicator, Text, View, Image, TextInput } from "react-native";
+import {
+  ActivityIndicator,
+  Text,
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import { useSelector } from "react-redux";
 import { BackSvg, MessageSvg } from "~assets/svg";
 import { selectAppLoader } from "~redux/slices/configSlice";
@@ -14,28 +21,42 @@ export default function Textfeild({
   secureTextEntry,
   textfeildStyles,
   keyboardType,
-  firstIcon
+  firstIcon,
+  secondIcon,
+  textfeildconatinerStyles,
+  onSecondIconPress,
 }) {
-  const appLoader = useSelector(selectAppLoader);
   return (
-    <View style={styles.textfeildconatiner}>
-      {firstIcon&&
-      <View>
-       {firstIcon}
-      </View>}
-      <View>
+    <View style={[styles.textfeildconatiner, textfeildconatinerStyles]}>
+      {firstIcon && <View style={styles.icons}>{firstIcon}</View>}
+      <View style={styles.secondView}>
         <View>
           <Text>{text}</Text>
+          <View
+            style={[
+              styles.textinput1,
+              { width: secondIcon ? width(78) : width(84) },
+              textfeildStyles,
+            ]}
+          >
+            <TextInput
+              onChangeText={onChangeText}
+              value={value}
+              secureTextEntry={secureTextEntry}
+              keyboardType={keyboardType}
+              placeholder={placeholder}
+            />
+          </View>
         </View>
-        <View style={[styles.textinput1,textfeildStyles]}>
-          <TextInput
-            onChangeText={onChangeText}
-            value={value}
-            secureTextEntry={secureTextEntry}
-            keyboardType={keyboardType}
-            placeholder={placeholder}
-           />
-        </View>
+        {secondIcon && (
+          <TouchableOpacity
+            onPress={onSecondIconPress}
+            activeOpacity={0.9}
+            style={[styles.icons, { alignItems: "flex-end" }]}
+          >
+            {secondIcon}
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   );

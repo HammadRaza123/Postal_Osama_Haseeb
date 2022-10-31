@@ -32,13 +32,13 @@ const styles = StyleSheet.create({
     marginTop:height(3)
   },
   innerwidth:{
-    width:width(20)
+    width:width(5)
   },
   textfeildconatainer:{
     flexDirection:'row',
     justifyContent:"space-between",
     marginTop:height(10),
-    width:width(85)
+    width:width(90)
   }
 });
 export default styles;

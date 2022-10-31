@@ -10,8 +10,8 @@ const styles = StyleSheet.create({
     backgroundColor:AppColors.black,
   },
   swiperlogo:{
-    width:width(54),
-    height:width(54),
+    width:width(58),
+    height:width(58),
   },
   btn1:{ 
     backgroundColor:AppColors.black,
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   },
   btn1text:{
     color:AppColors.orange,
-  },
+   },
   btnconatiner1:{
     backgroundColor:AppColors.black,
     flexDirection:"row",
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   text1:{
     color:AppColors.white,
     fontSize:20,
-    fontWeight:'bold'
+    fontWeight:'bold',alignItems:'center',
   },
   text1container:{
     marginTop:height(9.5),
@@ -47,14 +47,19 @@ const styles = StyleSheet.create({
   },
   text1o1container:{
     marginTop:height(9.5),
-    height:height(18),
+    height:height(11),
     justifyContent:"space-between",
     alignItems:'center',
     marginHorizontal:20
   },
+  text1o2container:{
+    width:width(80),
+    marginTop:height(4),
+  },
   text2:{
     fontSize:16,
     color:AppColors.white,
+    textAlign:'center'
   },
   activedotcontainer:{
     width:width(5),

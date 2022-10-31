@@ -8,10 +8,10 @@ import { selectIsLogin } from '~redux/slices/authSlice';
 import ScreenNames from './routes';
 import { HomeScreen } from '~screens/app';
 import SplashScreen from 'react-native-splash-screen';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+// import { createDrawerNavigator } from '@react-navigation/drawer';
 
 const Stack = createNativeStackNavigator();
-const Drawer = createDrawerNavigator();
+// const Drawer = createDrawerNavigator();
 
 
 export default function Routes() {

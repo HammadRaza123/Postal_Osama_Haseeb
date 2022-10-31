@@ -13,14 +13,16 @@ const styles = StyleSheet.create({
   componnetcontainer:{
     height:height(22.5),
      justifyContent:'space-between',
-    marginTop:height(6)
+    marginTop:height(6),
+    // flexDirection:"row"
   },
   forgetcontainer:{
     marginTop:height(3),
     flexDirection:"row-reverse"
   },
   forgettext:{
-     fontSize:15
+     fontSize:width(3.8),
+     fontWeight:"bold"
   },
   btncontainer:{
     flexDirection:'row',
@@ -69,7 +71,7 @@ const styles = StyleSheet.create({
     height:height(12.7),
     justifyContent:'space-between',
     alignItems:'center',
-    marginTop:45
+    marginTop:40
   },
   accounttextcolor:{
     color:AppColors.black,
